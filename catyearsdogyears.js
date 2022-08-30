@@ -1,4 +1,4 @@
-var humanYearsCatYearsDogYears = function (humanYears) {
+const humanYearsCatYearsDogYears = (humanYears) => {
     let catYears;
     let dogYears;
 
