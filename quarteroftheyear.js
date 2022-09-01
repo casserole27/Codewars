@@ -5,42 +5,23 @@ const quarterOf = (month) => {
     //7 - 9 months return 3
     //10 - 12 months return 4
 
-    /*const month = {
-        January: 1,
-        February: 2,
-        March: 3,
-        April: 4,
-        May: 5,
-        June: 6,
-        July: 7,
-        August: 8,
-        September: 9,
-        October: 10,
-        November: 11,
-        December: 12,
-    }*/
+    //When month is input as integer, use if statements, > or < operators, and  logical operators "&&" to determine the quarter.
 
-    let monthStr = ['January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December']
-
-    for (let i = 0; i <= monthStr.length; i++){ 
-    
-    if (i >= 0 && i <= 2) {
+    if (month >= 1 && month <= 3) {
         return 1;
     }
-    if (i >= 3 && i <= 5) {
+    if (month >= 4 && month <= 6) {
         return 2;
     }
-    if (i >= 6 && i <= 8) {
+    if (month >= 6 && month <= 8) {
         return 3;
     } 
-    if (i >= 9 && i <= 11) {
+    if (month >= 10 && month <= 12) {
         return 4;
     }
-    }  
-  };
+    }; 
 
-quarterOf(January);  
+console.log(quarterOf(8));  
 
 /*
 Given a month as an integer from 1 to 12, 
@@ -50,8 +31,4 @@ For example: month 2 (February), is part of the first quarter; month 6 (June),
 is part of the second quarter; and month 11 (November), is part of the fourth quarter.
 */
 
-// What is the easiest way to convert all the months to numbers?
-// Could I use an array and use the array's indexes? That might be 0 - 11 though because January would be at 0.
 
-//https://stackoverflow.com/questions/13566552/easiest-way-to-convert-month-name-to-month-number-in-js-jan-01
-//https://www.youtube.com/watch?v=QXC_GQUPqLI
