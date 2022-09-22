@@ -1,8 +1,20 @@
 
 function points(games) {
     // your code here
+    // ? A for loop is needed to iterate over the values of the array to count the points.
+    // ? I am unsure about the x:y format. How to define the first number as x and the second as y, or to separate them?
+    // ? "1:0" = x > y = 3 points
+    // ? x is always 0 - 4?
+    let result = "x:y"
+    for (let x = 0; x <= games.length; x++) {
+        console.log(games[x]);
+       
+    };
   }
 
+console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]) , 30);  
+
+//? two for loops?
 
 /*
 Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection.
