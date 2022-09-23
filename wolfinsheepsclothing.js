@@ -1,20 +1,40 @@
 
 function warnTheSheep(queue) {
+
+let position = queue.reverse().indexOf("wolf");
+
+if (position === 0) {
+   return "Pls go away and stop eating my sheep";
+} else {
+   return `Oi! Sheep number ${position}! You are about to be eaten by a wolf!`; 
+}
+
+};
+
 //? A for loop is needed to iterate over the sheep / wolf array.
 //? Position of the wolf should be identified. 
 //? If wolf is at a certain index, return a statement pertaining to the sheep "in front" of it
 
-let position = queue.reverse().indexOf("wolf");
-console.log(position);
-
-if (position = 0) {
-   return "Please go away and stop eating my sheep"
-} else {
-   return `Oi! Sheep number ${position}, You are about to be eaten by a wolf!` 
-}
-
 //? https://modthefuture.com/2022/02/28/codewars-a-wolf-in-sheeps-clothing-solution-javascript/
 //? exploring reversing the array, and finding "indexOf" the "wolf"
+
+//! A for loop was not needed in this case
+//! I just needed to find the position, the "indexOf" the wolf
+//! Reversing the array was much simpler than trying to count backwards over the array
+//! Reversing the array made the indexOf the wolf's position into the position of the sheep we needed to warn
+//! ['sheep', 'sheep', 'wolf', 'sheep', 'sheep', 'sheep', 'sheep', 'sheep']
+//! The wolf is at index 2 because array indexes start at 0, but the sheep we need to warn is at index two because of the way the problem is set up.
+//! I also had to remember to strictly equals $position in my if/else statement, '=' was trying to reassign $position to 0
+//? REMEMBER: working with arrays don't always equal for loops!
+
+
+// TODO Simplest answer from Codewars
+// TODO I know this is shorter, but I prefer if/else longhand?
+/*function warnTheSheep(queue) {
+   const position = queue.reverse().indexOf('wolf');
+   return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
+ }
+*/ 
 
 /*console.log(queue);
 let wolfPosition = "";
@@ -24,9 +44,7 @@ for (let i = 0; i < queue.length; i++) {
 
 console.log(wolfPosition);*/
 
-};
-
-console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]));
+//console.log(warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]));
 //"Oi! Sheep number 2! You are about to be eaten by a wolf!"));
 
 /*
