@@ -5,10 +5,14 @@ function points(games) {
     // ? I am unsure about the x:y format. How to define the first number as x and the second as y, or to separate them?
     // ? "1:0" = x > y = 3 points
     // ? x is always 0 - 4?
-    let result = "x:y"
-    for (let x = 0; x <= games.length; x++) {
-        console.log(games[x]);
-       
+    let result = 0
+    for (let i = 0; i < games.length; i++) {
+        if (games[i][0] > games[i][2]) {
+            result += 3;
+        } else if (games[i][0] == games[i][2]) {
+            result += 1;
+        }
+       return result;
     };
   }
 
