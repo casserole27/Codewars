@@ -5,16 +5,19 @@ function points(games) {
     // ? I am unsure about the x:y format. How to define the first number as x and the second as y, or to separate them?
     // ? "1:0" = x > y = 3 points
     // ? x is always 0 - 4?
-    let result = 0
-    for (let i = 0; i < games.length; i++) {
-        if (games[i][0] > games[i][2]) {
+        let result = 0;
+        for (let i = 0; i < games.length; ++i)
+        {
+          if (games[i][0] > games[i][2])
             result += 3;
-        } else if (games[i][0] == games[i][2]) {
+          if (games[i][0] == games[i][2])
             result += 1;
         }
-       return result;
-    };
-  }
+        return result;
+      }
+      //! I had initially made an if/else statement, which was breaking the code, or simply making in run differently.
+      //! We want both of these outcomes to add together for the total amount of points, not if else the scores are tied.
+      //! I was confused how to iterate over a ratio, but really we are just looking at specific indexes, and not counting index[1] because it is a ':'
 
 console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]) , 30);  
 
