@@ -12,6 +12,7 @@ function elevator(left, right, call){
     //!! I really did work hard on this own my own, but just couldn't come up with the right math.
     //! If the floor call minus the left floor is less than the floor call minus the right floor, than we need the elevator on the left
     //! Else we need the elevator on the right
+    //! Comparing call minus left and call minus right gives us the closest floor to call
     //! 0 - 0 < 0 - 1 true -> left
     //! 1 - 0 < 1 - 1 false -> right
     //! 2 - 0 < 2 - 1 false -> right
