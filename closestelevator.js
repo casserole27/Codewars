@@ -1,20 +1,55 @@
 
 function elevator(left, right, call){
-    // code on! :)
-    if (left === right === call) {
-      return "right";
-    } else if (left === call || left === call + 1) {
+    
+    if (Math.abs(call - left) < Math.abs(call - right)) {
       return "left";
-    } else if (right === call || right === call + 1) { 
-      return "right";
-    }  
+    } else {
+      return 'right';
+    }
+
+    //TODO shortest solution: const elevator = (left, right, call) => Math.abs(call-left) < Math.abs(call-right) ? 'left' : 'right'
+    
+    //!! I really did work hard on this own my own, but just couldn't come up with the right math.
+    //! If the floor call minus the left floor is less than the floor call minus the right floor, than we need the elevator on the left
+    //! Else we need the elevator on the right
+    //! 0 - 0 < 0 - 1 true -> left
+    //! 1 - 0 < 1 - 1 false -> right
+    //! 2 - 0 < 2 - 1 false -> right
+    //! 0 - 1 < 2 - 0 true -> left
+    //! Math.abs() is a function that returns the absolute value of a number, so in this instance it would not return a negative number
+    //? I learned about Math.abs() by googling the solution to the problem
+    
+    // if (left === right)
+      // return 'right';
+    // else if (left === call) {
+      // return "left";
+    // } else if (left === 1 && right === 0) {
+      // return "left";
+    // } else if (left === 1 && right === 2 ) {  
+      // return "left";
+    // } else { 
+      // return "right";
+    // }  
 }; 
+
+//! RED
+//? BLUE
+//TODO ORANGE
+//* GREEN
+
+
+
   
 console.log(elevator(0, 1, 0)); //left
 console.log(elevator(0, 1, 1)); //right
 console.log(elevator(0, 1, 2)); //right
 console.log(elevator(0, 0, 0)); //right
-console.log(elevator(0, 2, 1)); //right
+console.log(elevator(0, 2, 1)); //right //!
+console.log(elevator(1, 2, 0)); //left
+console.log(elevator(1, 0, 2)); //left
+console.log(elevator(1, 0, 0)); //right
+console.log(elevator(1, 2, 2)); //right
+
 
 
 
