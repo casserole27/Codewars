@@ -1,5 +1,21 @@
 function sumOfDifferences(arr) {
+  
+  const reversed = arr.reverse();
+  
+  //for (let i = 0; i <= reversed.length; i++) 
+  
+  const sum = (reversed[0] - reversed[1] + reversed[1] - reversed[2]);
+
+  return sum;
 }
+
+//? This logic works for arrays with three values. 
+//? It doesn't work for larger or smaller values, or when we need to return 0.
+//! Iterate over array
+
+console.log(sumOfDifferences([1, 2, 10]));
+console.log(sumOfDifferences([-3, -2, -1]));
+
 
 /*
 describe("sumOfDifferences([1, 2, 10]", function() {
