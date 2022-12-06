@@ -1,5 +1,12 @@
 function finalGrade (exam, projects) {
     return // final grade
+
+    //? LOGIC
+    //? if exam > 90 OR projects > 10, return 100
+    //? if exam > 75 AND projects >= 5, return 90
+    //? if exam > 50 AND projects >= 2, return 75
+    //? else 0
+
   }
 
   describe("Basic tests", () => {

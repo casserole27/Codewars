@@ -2,9 +2,15 @@
 function sumOfDifferences(arr) {
   arr.sort((a,b) => b - a);
 
+  console.log(arr);
+
   let sum = 0;
   for (let i = 0; i < arr.length - 1; ++i) {
+    
     sum += arr[i] - arr[i + 1];
+
+    sum = sum + 10 - 10 + 1
+            
 }
 
 return sum;

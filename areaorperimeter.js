@@ -1,13 +1,31 @@
 const areaOrPerimeter = function(l , w) {
-    // Return your answer
+  return (l === w) ? l * w : 2 * (l + w);
+  //****** ONE LINE OF CODE! CELEBRATE! */ 
+  
+  
+    //* THIS WORKS TOO
+    // if (l === w) {
+    //   return l * w;
+    // } else {
+    //   return (l + w) * 2;
+    // }
+
+  
+    //* LOGIC NOTES
+    //? if l = w = l x w
+    //? else l + w * 2
   };
 
-  describe("Tests", () => {
-    it("test", () => {
-      assert.strictEqual(areaOrPerimeter(3,  3),  9);
-      assert.strictEqual(areaOrPerimeter(6, 10), 32);
-    });
-  });
+  console.log(areaOrPerimeter(3, 3));
+  console.log(areaOrPerimeter(6, 10));
+
+
+  // describe("Tests", () => {
+  //   it("test", () => {
+  //     assert.strictEqual(areaOrPerimeter(3,  3),  9);
+  //     assert.strictEqual(areaOrPerimeter(6, 10), 32);
+  //   });
+  // });
 
 //   You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
 // If it is a square, return its area. If it is a rectangle, return its perimeter.
